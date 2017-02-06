@@ -1,0 +1,23 @@
+{
+  "curly": true,
+  "eqeqeq": true,
+  "freeze": true,
+  "indent": 4,
+  "noarg": true,
+  "undef": true,
+  "unused": "vars",
+  "trailing": true,
+  "maxdepth": 4,
+  "boss" : true,
+  "esnext": true,
+  "eqnull": true,
+  "evil": true,
+  "loopfunc": true,
+  "smarttabs": true,
+  "maxerr" : 200,
+  "node": true,
+  "globals": {
+    "describe": true,
+    "it": true
+  }
+}
