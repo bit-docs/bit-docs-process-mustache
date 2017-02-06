@@ -5,7 +5,12 @@
   "main": "bit-docs.js",
   "scripts": {
     "jshint": "jshint *.js --config",
-    "test": "npm run jshint && mocha --reporter spec"
+    "test": "npm run jshint && mocha --reporter spec",
+    "preversion": "npm test",
+    "postversion": "git push --tags && git push",
+    "release:patch": "npm version patch && npm publish",
+    "release:minor": "npm version minor && npm publish",
+    "release:major": "npm version major && npm publish"
   },
   "repository": {
     "type": "git",
