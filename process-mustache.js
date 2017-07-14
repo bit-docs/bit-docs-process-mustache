@@ -4,17 +4,26 @@ var path = require("path");
  * @parent bit-docs-process-mustache/modules
  * @module {function} bit-docs-process-mustache/process-mustache
  *
- * @signature `processMustache(filename, source)`
+ * @signature `processMustache(filename, source, docMap, siteConfig, addToDocMap)`
  *
- * Processes a `.mustache` file and adds it as a template to the docMap.
+ * Processes a `.mustache` file and adds it as a template to the
+ * [bit-docs/types/docMap].
  *
- * @param {String} filename The filename with its extension
+ * @param {String} filename The filename with its extension.
  *
- * @param {String} source A files source
+ * @param {String} source A files source.
+ * 
+ * @param {bit-docs/types/docMap} docMap A map of the name of each
+ * [bit-docs/types/docObject] to the [bit-docs/types/docObject].
+ *
+ * @param {{}} [siteConfig] An siteConfig object.
+ * 
+ * @param {function} addToDocMap A callback function that adds passed
+ * [bit-docs/types/docObject] to [bit-docs/types/docMap].
  *
  * @body
  */
-module.exports = function(filename, source) {
+module.exports = function(filename, source, docMap, siteConfig, addToDocMap) {
   if (isMustache(filename)) {
     addToDocMap({
       body: source,
