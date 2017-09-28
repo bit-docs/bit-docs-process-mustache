@@ -1,6 +1,6 @@
 {
   "name": "bit-docs-process-mustache",
-  "version": "0.0.1",
+  "version": "0.0.2-0",
   "description": "Process content in mustache files",
   "main": "bit-docs.js",
   "scripts": {
